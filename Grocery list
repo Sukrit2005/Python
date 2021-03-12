@@ -1,0 +1,55 @@
+while True:  
+    try: 
+        budget = float(input("Enter your budget: "))
+        s=budget
+    except ValueError: 
+        print("PRINT NUMBER AS A AMOUNT") 
+        continue
+    else: 
+        break
+a ={"Product name":[], "Quantity":[], "Price":[]} 
+b = list(a.values()) 
+x = b[0] 
+y = b[1] 
+z = b[2] 
+
+while True: 
+    try: 
+        c = int(input("1.Add an item: \n2.Exit\nEnter your choice: ")) 
+    except ValueError: 
+        print("\nERROR: Choose only digits from the given option") 
+        continue
+    else: 
+        if c == 1 and s>0:
+            p = input("Enter product name: ")  
+            q = input("Enter quantity: ") 
+            r = float(input("Enter price of the product: "))   
+  
+            if r>s: 
+                print("\nCan't Buy the product ###(because budget left is ",s,")")  
+                continue
+            else: 
+                if p in x:   
+                    ind = x.index(p)   
+                    y.remove(y[ind])  
+                    z.remove(z[ind])   
+                    y.insert(ind, q)    
+                    z.insert(ind, r)    
+                    s = budget-sum(z)    
+                    print("\nAmount left: ", s) 
+                else: 
+                    x.append(p)   
+                    y.append(q)    
+                    z.append(r)     
+                    s = budget-sum(z)    
+                    print("\nAmount left: ", s) 
+        elif s<= 0:  
+            print("\nNO BUDGET")  
+        else: 
+            break 
+print("\nAmount left : ", s)  
+if s in z:  
+    print("\nAmount left can buy you a", x[z.index(s)])   
+print("\n\n\nGROCERY LIST is: ")
+for i in range(len(x)):  
+    print(x[i],y[i],z[i])
