@@ -1,0 +1,12 @@
+from random import choice
+
+questions = ["Why is the sky blue?: ", "Why are you here?: ", "Why are we going?: ", "Who are You?: ", "Why do we have to study?: "]
+question = choice(questions)
+answer = input(question).strip().lower()
+while True:
+    breaker=["just because","huh","enough"]
+    breaks=choice(breaker).strip().lower()
+    while answer != breaks:
+        answer = input("why?: ").strip().lower()
+    print ("Oh, ... okay")
+    break
