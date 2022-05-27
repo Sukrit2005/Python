@@ -1,0 +1,54 @@
+from turtle import *
+from random import *
+t=Turtle()
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+def triangle():
+    t.color(choice(colours))
+    for i in range(3):
+        t.forward(100)
+        t.right(120)
+def square():
+    t.color(choice(colours))
+    for i in range(0,4):
+        t.forward(100)
+        t.right(90)
+def pentagon():
+    t.color(choice(colours))
+    for i in range(5):
+        t.forward(100)
+        t.right(72)
+def hexagon():
+    t.color(choice(colours))
+    for i in range(6):
+        t.forward(100)
+        t.right(60)
+def heptagon():
+    t.color(choice(colours))
+    for i in range(7):
+        t.forward(100)
+        t.right(51.4285714)
+def octagon():
+    t.color(choice(colours))
+    for i in range(8):
+        t.forward(100)
+        t.right(45)
+def nonagon():
+    t.color(choice(colours))
+    for i in range(9):
+        t.forward(100)
+        t.right(40)
+def decagon():
+    t.color(choice(colours))
+    for i in range(10):
+        t.forward(100)
+        t.right(36)
+triangle()
+square()
+pentagon()
+hexagon()
+heptagon()
+octagon()
+nonagon()
+decagon()
+s=Screen()
+s.exitonclick()
